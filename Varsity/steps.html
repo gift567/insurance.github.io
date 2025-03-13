@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step by Step Section</title>
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+        .steps-container {
+            width: 90%;
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        .step {
+            background: white;
+            margin: 20px 0;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .step img {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+        .step-content {
+            flex: 1;
+        }
+        .step h3 {
+            margin: 0 0 10px;
+            color: #333;
+        }
+        .step p {
+            margin: 0;
+            color: #666;
+        }
+        @media (max-width: 600px) {
+            .step {
+                flex-direction: column;
+                text-align: center;
+            }
+            .step img {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+
+    
+</head>
+<body>
+
+
+    <div class="steps-container">
+        <div class="step">
+            <img src="step1.jpg" alt="Step 1">
+            <div class="step-content">
+                <h3>Step 1: Title</h3>
+                <p>Description of step 1 goes here.</p>
+            </div>
+        </div>
+        <div class="step">
+            <img src="step2.jpg" alt="Step 2">
+            <div class="step-content">
+                <h3>Step 2: Title</h3>
+                <p>Description of step 2 goes here.</p>
+            </div>
+        </div>
+        <div class="step">
+            <img src="step3.jpg" alt="Step 3">
+            <div class="step-content">
+                <h3>Step 3: Title</h3>
+                <p>Description of step 3 goes here.</p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
