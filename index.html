@@ -110,6 +110,101 @@
           flex: 1 1 100%;
         }
       }
+
+
+      /* modes of learning css */
+
+      .modes {
+    padding: 60px 20px;
+    background: #f5f5f5;
+    text-align: center;
+    color: #333;
+  }
+
+  .modes h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+  }
+
+  .modes h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #00c6ff;
+    margin: 10px auto 0;
+    border-radius: 2px;
+  }
+
+  .mode-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .mocard {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.5s;
+    position: relative;
+  }
+
+  .mocard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    cursor: pointer;
+  }
+
+  .mocard h3 {
+    color: #0072ff;
+    margin-bottom: 10px;
+  }
+
+  .mocard p {
+    font-size: 1rem;
+    color: #555;
+  }
+
+  .icon {
+    font-size: 50px;
+    color: #00c6ff;
+    margin-bottom: 15px;
+    animation: bounce 2s infinite;
+  }
+
+
+
+  /* Card entrance animation */
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Icon bounce animation */
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  @media (max-width: 768px) {
+  .mode-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  }
+      /* modes of learning end of css */
     </style>
 
   </head>
@@ -471,6 +566,40 @@
       </div>
     </div>
   </section>
+
+
+  <!-- modes of learning  start -->
+
+
+  <section class="modes">
+    <h2>Modes of Learning</h2>
+    <div class="mode-cards">
+      
+      <!-- Online Learning -->
+      <div class="mocard">
+        <i class="fas fa-laptop-code icon"></i>
+        <h3>Online Learning</h3>
+        <p>Study from anywhere with our virtual classrooms, video lectures, and online resources.</p>
+      </div>
+  
+      <!-- Physical Learning -->
+      <div class="mocard">
+        <i class="fas fa-user-graduate icon"></i>
+        <h3>Physical Learning</h3>
+        <p>Attend in-person classes at our campus and benefit from face-to-face interactions.</p>
+      </div>
+  
+      <!-- Library Access -->
+      <div class="mocard">
+        <i class="fas fa-book-reader icon"></i>
+        <h3>Library Access</h3>
+        <p>Access our modern library with thousands of books, journals, and digital materials.</p>
+      </div>
+  
+    </div>
+  </section>
+
+  <!-- modes of learning end -->
 
   <section class="simple-cta">
     <div class="container">
