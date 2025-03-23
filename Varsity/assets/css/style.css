@@ -239,6 +239,11 @@ img {
   float: left;
   margin-top: 50px;
 }
+
+
+.navbar-header a:hover{
+  background-color:rgb(42, 5, 207) ;
+} 
 /* ALL SECTION */
 /*scrol to top*/
 .scrollToTop {
@@ -262,6 +267,7 @@ img {
   -ms-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
+  background-color:  rgb(42, 5, 207);
 }
 .scrollToTop i {
   display: block;
@@ -439,7 +445,7 @@ img {
   background-color: #2ecc71;
 }
 #mu-service .mu-service-area .mu-service-single:nth-child(3) {
-  background-color: #45a0de;
+  background-color: rgb(42, 5, 207);
 }
 #mu-service .mu-service-area .mu-service-single span {
   font-size: 30px;
@@ -1318,6 +1324,7 @@ img {
 }
 .mu-pagination .pagination .active a {
   color: #fff;
+  background-color:  rgb(42, 5, 207);
 }
 
 .mu-related-item {
@@ -2000,6 +2007,7 @@ img {
   font-size: 14px;
   letter-spacing: 0.5px;
   padding: 5px 10px;
+  background-color:  rgb(42, 5, 207);
 }
 #mu-footer .mu-footer-top .mu-footer-top-area .mu-footer-widget address p {
   font-weight: lighter;
