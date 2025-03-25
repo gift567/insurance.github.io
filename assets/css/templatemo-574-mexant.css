@@ -787,7 +787,7 @@ banner
 .slide-inner .header-text h2 {
   position: relative;
   z-index: 2;
-  font-size: 47px;
+  font-size: 40px;
   color: #fff;
   font-weight: 700;
   opacity: 1;
@@ -1776,6 +1776,7 @@ body {
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
+    font-size: 20px;
   }
   .slide-inner .header-text .div-dec {
     margin-left: auto;
