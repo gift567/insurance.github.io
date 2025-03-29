@@ -2054,7 +2054,7 @@ img {
   }
 
   .navbar-header a img{
-    height: 20px;
+    height: 90px;
   }
 
   #mu-search .mu-search-area {
@@ -2195,6 +2195,10 @@ img {
 
   #mu-menu .navbar-header .navbar-brand {
     padding-top: 10px;
+  }
+
+  .navbar-header a img{
+    height: 60px;
   }
 
   #mu-search-icon {
