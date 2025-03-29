@@ -1293,6 +1293,12 @@ img {
   margin-top: 10px;
 }
 
+
+.mu-latest-course-single img{
+ height: 47rem;
+ width: 20rem;
+}
+
 .mu-pagination {
   display: inline;
   float: left;
