@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ad Cards</title>
+  <style>
+
+
+
+
+    .ad-section {
+      padding: 40px 20px;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .ad-section h2 {
+      font-size: 28px;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    .ads-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .ad-card {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .ad-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .ad-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .ad-card-content {
+      padding: 20px;
+    }
+
+    .ad-card-content h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .ad-card-content p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .ad-card-content a {
+      display: inline-block;
+      padding: 10px 16px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .ad-card-content a:hover {
+      background-color: #0056b3;
+    }
+
+
+    
+  </style>
+</head>
+<body>
+
+  <section class="ad-section">
+    <h2>Sponsored Ads</h2>
+    <div class="ads-container">
+      <div class="ad-card">
+        <img src="./assets/images/Luso creative space (142).jpg" alt="Ad 1">
+        <div class="ad-card-content">
+          <h3>Ad Title One</h3>
+          <p>This is a short description of the product or service.</p>
+          <a href="#">Learn More</a>
+        </div>
+      </div>
+      <div class="ad-card">
+        <img src="./assets/images/Luso creative space (142).jpg" alt="Ad 2">
+        <div class="ad-card-content">
+          <h3>Ad Title Two</h3>
+          <p>Promote your brand with this amazing offer.</p>
+          <a href="#">Visit Site</a>
+        </div>
+      </div>
+      <div class="ad-card">
+        <img src="./assets/images/Luso creative space (142).jpg" alt="Ad 3">
+        <div class="ad-card-content">
+          <h3>Ad Title Three</h3>
+          <p>Discover more about this exclusive deal today!</p>
+          <a href="#">Check it Out</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
