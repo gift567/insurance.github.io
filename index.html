@@ -31,6 +31,285 @@
     <style>
 
 
+
+    .front-banner {
+      position: relative;
+      width: 100%;
+      height: 60vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .front-banner-bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: 0;
+      filter: brightness(50%);
+    }
+
+    .front-banner::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5); /* dark overlay */
+      z-index: 1;
+    }
+
+    .front-banner-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: white;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      line-height: 1.6; /* improves readability */
+    }
+
+    .front-banner-content h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      animation: fadeInDown 1s ease-out;
+      line-height: 1.3;
+    }
+
+    .front-banner-content p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+
+    .front-apply-btn {
+      background-color: #38bdf8;
+      color: #000;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    .front-apply-btn:hover {
+      background-color: #0ea5e9;
+      color: white;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .front-banner-content h1 {
+        font-size: 2rem;
+      }
+
+      .front-banner-content p {
+        font-size: 1rem;
+      }
+    }
+
+      /* first section */
+          .gear-course-section {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 40px;
+      background: #fff;
+      max-width: 1100px;
+      margin: 40px auto;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      border-radius: 16px;
+    }
+
+    .gear-course-image {
+      flex: 1 1 40%;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .gear-course-image img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.3);
+      transform: perspective(800px) rotateY(-5deg);
+      transition: transform 0.3s ease;
+    }
+
+    .gear-course-image img:hover {
+      transform: perspective(800px) rotateY(0deg);
+    }
+
+    .gear-course-content {
+      flex: 1 1 60%;
+      padding: 20px;
+    }
+
+    .gear-course-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .gear-course-content h3 {
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+      color: #666;
+    }
+
+    .gear-course-content p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #444;
+      margin-bottom: 30px;
+    }
+
+    .gear-course-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .gear-course-buttons button {
+      background-color: #0a84ff;
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .gear-course-buttons button:hover {
+      background-color: #005fd1;
+    }
+
+    @media (max-width: 768px) {
+      .gear-course-section {
+        flex-direction: column;
+      }
+
+      .gear-course-image, .gear-course-content {
+        flex: 1 1 100%;
+        text-align: center;
+      }
+
+      .gear-course-content h1, 
+      .gear-course-content h3,
+      .gear-course-content p {
+        text-align: center;
+      }
+
+      .gear-course-buttons {
+        justify-content: center;
+      }
+    }
+
+    .homepage-courses-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .homepage-courses-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: #222;
+    }
+
+    .homepage-courses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .homepage-course-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .homepage-course-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    }
+
+    .homepage-course-card img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+    }
+
+    .homepage-course-content {
+      padding: 20px;
+      text-align: left;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .homepage-course-content h3 {
+      margin: 0 0 10px;
+      color: #0a84ff;
+      font-size: 1.4rem;
+    }
+
+    .homepage-course-content p {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 15px;
+      flex-grow: 1;
+    }
+
+    .homepage-course-meta {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    .homepage-apply-btn {
+      display: inline-block;
+      background-color: #0a84ff;
+      color: white;
+      padding: 10px 18px;
+      text-align: center;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .homepage-apply-btn:hover {
+      background-color: #005fd1;
+    }
+
 .ad-section {
       padding: 40px 20px;
       background-color: #fff;
@@ -430,12 +709,87 @@
 
 
 
+ <section class="front-banner">
+    <img class="front-banner-bg" src="./assets/images/zcpit_img1 (1).jpg" alt="Banner Background">
+    <div class="front-banner-content">
+      <h1 style="color: #fff;">July 2025 Intake Applications</h1>
+      <p style="color: #fff;">Secure your spot at one of Zambia’s most trusted institutions. Limited spaces available. Apply today and take the next step toward your career!</p>
+      <a href="#apply" class="front-apply-btn">Apply Now</a>
+    </div>
+  </section>
+  
 
 
 
 
+<div class="gear-course-section">
+  <div class="gear-course-image">
+    <img src="./assets/images/zcpit_img1 (1).jpg" alt="Course Image">
+  </div>
+  <div class="gear-course-content">
+    <h1 style="font-weight: 700; text-align: left;">Master Your Future</h1>
+    <h3>Explore Our Top Professional Courses</h3>
+    <p>Upgrade your skills with our expert-led programs designed for real-world success in finance, logistics, insurance, and more. Choose your path today.</p>
+    
+    <div class="gear-course-buttons">
+    <a href="./academics/courses/Diploma in Insurance.html"> <button>Diploma in Insurance</button>  </a> 
+    <a href="./academics/courses/Diploma in Insurance.html"> <button>Certificate in Insurance</button>  </a> 
+    <a href="./academics/courses/Diploma in Insurance.html"> <button>ZILT Diploma</button>  </a> 
+    <a href="./academics/courses/Diploma in Insurance.html"> <button>Diploma in Banking and Finance</button>  </a> 
+    <a href="./academics/courses/Diploma in Insurance.html"> <button>Certificate in Banking and Finance</button>  </a> 
+    <a href="./academics/courses/Diploma in Insurance.html"> <button>Certificate in Financial Administration</button>  </a> 
+    <a href="./academics/courses/Diploma in Insurance.html"> <button>Certificate in Paralegal Studies</button>  </a> 
+    </div>
+  </div>
+</div>
 
 
+<section class="homepage-courses-section">
+  <h2>Explore Our Professional Courses</h2>
+
+  <div class="homepage-courses-grid">
+
+    <div class="homepage-course-card">
+      <img src="./assets/images/frontPage (3).jpg" alt="Insurance Course">
+      <div class="homepage-course-content">
+        <h3>Certificate in Insurance</h3>
+        <p>Build foundational skills for a successful career in the insurance industry with practical modules and expert tutors.</p>
+        <div class="homepage-course-meta">
+          <span>Intake: July 2025 / Semester</span>
+          <span>Price: K3,500</span>
+        </div>
+        <a href="#" class="homepage-apply-btn">Apply Now</a>
+      </div>
+    </div>
+
+    <div class="homepage-course-card">
+      <img src="./assets/images/frontPage (2).jpg" alt="Banking Course">
+      <div class="homepage-course-content">
+        <h3>Diploma in Banking & Finance</h3>
+        <p>Develop strong financial literacy and practical banking knowledge to thrive in Zambia’s financial services sector.</p>
+        <div class="homepage-course-meta">
+          <span>Intake: July 2025 / Semester</span>
+          <span>Price: K5,200</span>
+        </div>
+        <a href="#" class="homepage-apply-btn">Apply Now</a>
+      </div>
+    </div>
+
+    <div class="homepage-course-card">
+      <img src="./assets/images/frontPage (1).jpg" alt="Logistics Course">
+      <div class="homepage-course-content">
+        <h3>Diploma in Logistics & Transport</h3>
+        <p>Learn supply chain strategy, logistics management, and transportation systems in this CILT UK-accredited program.</p>
+        <div class="homepage-course-meta">
+          <span>Intake: July 2025 / Semester</span>
+          <span>Price: K6,000</span>
+        </div>
+        <a href="#" class="homepage-apply-btn">Apply Now</a>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 
  <section class="ad-section">
@@ -961,42 +1315,16 @@
     </div>
   </section> -->
 
-  <section class="partners">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-2 col-sm-4 col-6">
-          <div class="item">
-            <img src="assets/images/pia.png" alt="">
-          </div>
-        </div>
-        <div class="col-lg-2 col-sm-4 col-6">
-          <div class="item">
-            <img src="assets/images/pia.png" alt="">
-          </div>
-        </div>
-        <div class="col-lg-2 col-sm-4 col-6">
-          <div class="item">
-            <img src="assets/images/pia.png" alt="">
-          </div>
-        </div>
-        <div class="col-lg-2 col-sm-4 col-6">
-          <div class="item">
-            <img src="assets/images/pia.png" alt="">
-          </div>
-        </div>
-        <div class="col-lg-2 col-sm-4 col-6">
-          <div class="item">
-            <img src="assets/images/pia.png" alt="">
-          </div>
-        </div>
-        <div class="col-lg-2 col-sm-4 col-6">
-          <div class="item">
-            <img src="assets/images/pia.png" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section class="partners-section">
+  <h2>Our Trusted Partners</h2>
+  <div class="partners-logos">
+    <img src="./assets/images/PIA-LOGO.png" alt="Partner 1">
+    <img src="./assets/images/iaz-removebg-preview.png" alt="Partner 2">
+    <img src="./assets/images/zapf-removebg-preview.png" alt="Partner 3">
+    <img src="./assets/images/ibaz-removebg-preview.png" alt="Partner 4">
+  </div>
+</section>
+
 
   <footer>
     <div class="footer-container">

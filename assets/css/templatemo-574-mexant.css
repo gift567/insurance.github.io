@@ -1212,21 +1212,57 @@ partners
 --------------------------------------------- 
 */
 
-section.partners {
-  background-color: #222222;
-  padding: 80px 0px;
-  width: 100%;
-}
 
-section.partners .item {
-  margin: 0px 15px;
-  cursor: pointer;
-  transition: all .3s;
-}
+    .partners-section {
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
 
-section.partners .item:hover {
-  opacity: 0.75;
-}
+    .partners-section h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .partners-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .partners-logos img {
+      height: 60px;
+      object-fit: contain;
+      background-color: white;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      will-change: transform;
+    }
+
+    .partners-logos img:hover {
+      transform: scale(1.05) rotateX(4deg) rotateY(4deg);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    @media (max-width: 768px) {
+      .partners-logos {
+        gap: 20px;
+      }
+
+      .partners-logos img {
+        height: 50px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .partners-logos img {
+        height: 40px;
+      }
+    }
 
 
 
