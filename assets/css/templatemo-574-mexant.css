@@ -359,7 +359,7 @@ header
 .header-area .main-nav .nav li:last-child a {
   font-size: 14px;
   color: #fff;
-  background-color: rgb(42, 5, 207);
+  background-color: #0054a5;
   padding: 10px 20px !important;
   display: inline-block;
   border-radius: 5px;
@@ -393,12 +393,12 @@ header
 
 .header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
-  color: rgb(42, 5, 207);
+  color: #0054a5;
 }
 
 .background-header .main-nav .nav li:hover a,
 .background-header .main-nav .nav li a.active {
-  color: rgb(42, 5, 207);
+  color: #0054a5;
   opacity: 1;
 }
 
@@ -458,7 +458,7 @@ header
 
 .header-area .main-nav .nav li.has-sub ul li a:hover {
   background: #fff;
-  color: rgb(42, 5, 207)!important;
+  color: #0054a5!important;
   padding-left: 25px;
 }
 
@@ -617,7 +617,7 @@ header
   }
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
-    color: rgb(42, 5, 207)!important;
+    color: #0054a5!important;
     opacity: 1;
   }
   .header-area.header-sticky .nav li.search-icon a {
@@ -679,7 +679,7 @@ header
   }
   .header-area .main-nav .nav li a:hover {
     background: #eee !important;
-    color: rgb(42, 5, 207)!important;
+    color: #0054a5!important;
   }
   .header-area .main-nav .nav li.has-sub ul.sub-menu {
     position: relative;
