@@ -251,7 +251,7 @@ section {
 header
 --------------------------------------------- 
 */
-.background-header {
+/* .background-header {
   background-color: #222222;
   height: 80px!important;
   position: fixed!important;
@@ -720,7 +720,7 @@ header
   .header-area .main-nav .nav {
     display: flex !important;
   }
-}
+} */
 
 
 /* 
@@ -728,7 +728,7 @@ header
 banner
 --------------------------------------------- 
 */
-
+/* 
 .swiper-container {
   height: calc(100vh - 0px);
   margin-top: 10px;
@@ -789,7 +789,7 @@ banner
 .slide-inner .header-text h2 {
   position: relative;
   z-index: 2;
-  font-size: 40px;
+  font-size: 30px;
   color: #fff;
   font-weight: 700;
   opacity: 1;
@@ -838,7 +838,7 @@ banner
 
 .swiper-button-next, .swiper-button-prev {
   color: #ffffff !important;
-}
+} */
 
 /*
 ---------------------------------------------

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programs Selection</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      font-family: Arial, sans-serif;
+    }
+
+    .hero {
+      position: relative;
+      background-image: url('./assets/images/Luso\ creative\ space\ \(146\).jpg'); /* Replace with your image URL */
+      background-size: cover;
+      background-position: center;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .hero-buttons button {
+        color: white;
+        width: 250px;
+        height: 70px;
+      padding: 12px 24px;
+      background-color: #0054a5;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero-buttons button:hover {
+      background-color: #0768c2;
+    }
+
+    .cards-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 30px;
+      background-color: #f7f7f7;
+    }
+
+    .card {
+      background: white;
+      max-width: 400px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h1 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .card-content p {
+      font-size: 1rem;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Explore Our Programs</h1>
+      <div class="hero-buttons">
+       <a href="./academics/course.html"><button>Conventional Programs</button> </a> 
+        <a href="./academics/short-courses.html"><button>Short Courses</button></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cards Section -->
+  <section class="cards-section">
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="./assets/images/grad1.png" alt="Conventional Programs">
+      <div class="card-content">
+        <h1>Conventional Programs</h1>
+        <p>Our long-term academic programs are structured to provide students with deep industry knowledge and professional skills across various disciplines.</p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <img src="./assets/images/WhatsApp_Image_2024-11-04_at_10.10.44-removebg-preview.png" alt="Short Courses">
+      <div class="card-content">
+        <h1>Short Courses</h1>
+        <p>Designed for professionals and individuals seeking to upgrade their skills in a short time, our short courses offer practical and impactful learning experiences.</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
