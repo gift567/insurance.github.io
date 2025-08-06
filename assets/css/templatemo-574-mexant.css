@@ -876,6 +876,10 @@ section.services {
   margin-right: 30px;
 }
 
+.service-button a{
+  background-color: #0054a7;
+}
+
 
 
 /*
@@ -1103,7 +1107,7 @@ section.calculator .section-heading h4 {
 #calculate button.orange-button {
   font-size: 14px;
   color: #fff;
-  background-color: rgb(42, 5, 207);
+  background-color: #0054a7;
   padding: 12px 30px;
   display: inline-block;
   border-radius: 5px;
@@ -1273,7 +1277,7 @@ footer
 */
 
 footer {
-  background-color:  rgb(42, 5, 207);
+  background-color:  #0054a7;
   text-align: center;
   padding: 25px 0px;
 }
