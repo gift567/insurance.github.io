@@ -1217,57 +1217,46 @@ partners
 */
 
 
-    .partners-section {
-      max-width: 1100px;
-      margin: 0 auto;
-      text-align: center;
-    }
+ .partner-mover {
+  overflow: hidden;
+  background: #fff;
+  padding: 20px 0;
+}
 
-    .partners-section h2 {
-      font-size: 2rem;
-      margin-bottom: 30px;
-      color: #333;
-    }
+.mover-track {
+  display: flex;
+  width: calc(250px * 10); /* 5 logos x 2 (repeated) */
+  animation: scroll 20s linear infinite;
+}
 
-    .partners-logos {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-    }
+.mover {
+  width: 250px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    .partners-logos img {
-      height: 60px;
-      object-fit: contain;
-      background-color: white;
-      padding: 10px;
-      border-radius: 10px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-      will-change: transform;
-    }
+.mover img {
+  max-width: 80%;
+  max-height: 80px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
 
-    .partners-logos img:hover {
-      transform: scale(1.05) rotateX(4deg) rotateY(4deg);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-    }
+.mover img:hover {
+  filter: grayscale(0%);
+}
 
-    @media (max-width: 768px) {
-      .partners-logos {
-        gap: 20px;
-      }
-
-      .partners-logos img {
-        height: 50px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .partners-logos img {
-        height: 40px;
-      }
-    }
-
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
 
 /* 
