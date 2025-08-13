@@ -3,72 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Our Alumni</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    #alumni-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .alumni-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .alumni-card:hover {
+      transform: translateY(-5px);
+    }
+    .alumni-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 15px;
+    }
+    .alumni-card h3 {
+      margin: 0;
+      color: #0073aa;
+    }
+    .alumni-card p {
+      margin: 8px 0;
+      color: #555;
+      font-size: 14px;
+    }
+    @media(max-width: 600px) {
+      .alumni-card img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  </style>
 </head>
 <body>
 
+<h1>Our Alumni</h1>
+<div id="alumni-list">Loading...</div>
 
-  <style>
+<script>
+   const sheetUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQivfTZUXys30UvgLpzo1bVHeW6LXCPp6w2QjxeRVS9B56OijjvQw23CH4wNZY_h5fctC7_57BtHJ1A/pub?gid=0&single=true&output=csv"; // Paste your CSV link here
 
-.partner-mover {
-  overflow: hidden;
-  background: #fff;
-  padding: 20px 0;
-}
-
-.mover-track {
-  display: flex;
-  width: calc(250px * 10); /* 5 logos x 2 (repeated) */
-  animation: scroll 20s linear infinite;
-}
-
-.mover {
-  width: 250px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.mover img {
-  max-width: 80%;
-  max-height: 80px;
-  object-fit: contain;
-  filter: grayscale(100%);
-  transition: filter 0.3s;
-}
-
-.mover img:hover {
-  filter: grayscale(0%);
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-
-  </style>
-
-  <div class="partner-mover">
-  <div class="mover-track">
-    <div class="mover"><img src="./assets/images/ibaz-removebg-preview.png" alt="Partner 1"></div>
-    <div class="mover"><img src="./assets/images/iaz-removebg-preview.png" alt="Partner 2"></div>
-    <div class="mover"><img src="./assets/images/PIA-LOGO.png" alt="Partner 3"></div>
-    <div class="mover"><img src="./assets/images/zapf-removebg-preview.png" alt="Partner 4"></div>
-    <!-- <div class="slide"><img src="logo5.png" alt="Partner 5"></div> -->
-    <!-- Repeat logos for seamless loop -->
-     <div class="mover"><img src="./assets/images/ibaz-removebg-preview.png" alt="Partner 1"></div>
-    <div class="mover"><img src="./assets/images/iaz-removebg-preview.png" alt="Partner 2"></div>
-    <div class="mover"><img src="./assets/images/PIA-LOGO.png" alt="Partner 3"></div>
-    <div class="mover"><img src="./assets/images/zapf-removebg-preview.png" alt="Partner 4"></div>
-    <div class="mover"><img src="logo5.png" alt="Partner 5"></div>
-  </div>
-</div>
+  fetch(sheetUrl)
+    .then(res => res.text())
+    .then(csv => {
+      const rows = csv.split("\n").slice(1); // Skip header row
+      const container = document.getElementById("alumni-list");
+      container.innerHTML = "";
+      rows.forEach(row => {
+        const [name, year, role, testimonial, img] = row.split(",");
+        if (!name) return;
+        container.innerHTML += `
+          <div class="alumni-card">
+            <img src="${img || 'https://via.placeholder.com/100'}" alt="${name}">
+            <h3>${name}</h3>
+            <p><strong>${year}</strong> - ${role}</p>
+            <p>${testimonial}</p>
+          </div>
+        `;
+      });
+    });
+</script>
 
 </body>
 </html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alumni Directory</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: #f4f4f4;
+  }
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+  input, select {
+    padding: 8px;
+    font-size: 14px;
+  }
+  .alumni-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+  .card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  .card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  .card h3 {
+    margin: 10px 0 5px;
+    color: #333;
+  }
+  .card p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+  }
+</style>
+</head>
+<body>
+
+<h1>Our Alumni</h1>
+
+<div class="controls">
+  <input type="text" id="search" placeholder="Search by name or role">
+  <select id="yearFilter">
+    <option value="">All Years</option>
+  </select>
+</div>
+
+<div class="alumni-grid" id="alumniGrid">
+  <p>Loading alumni data...</p>
+</div>
+
+<script>
+const sheetUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQivfTZUXys30UvgLpzo1bVHeW6LXCPp6w2QjxeRVS9B56OijjvQw23CH4wNZY_h5fctC7_57BtHJ1A/pub?gid=0&single=true&output=csv";
+
+let alumniData = [];
+
+fetch(sheetUrl)
+  .then(res => res.text())
+  .then(csvText => {
+    const rows = csvText.trim().split("\n").map(r => r.split(","));
+    const headers = rows.shift(); // first row as headers
+
+    alumniData = rows.map(row => {
+      let obj = {};
+      headers.forEach((h, i) => obj[h.trim()] = row[i] ? row[i].trim() : "");
+      return obj;
+    });
+
+    populateYearFilter();
+    displayAlumni(alumniData);
+  });
+
+function populateYearFilter() {
+  const years = [...new Set(alumniData.map(a => a.Year).filter(y => y))].sort((a, b) => b - a);
+  const yearSelect = document.getElementById("yearFilter");
+  years.forEach(year => {
+    let option = document.createElement("option");
+    option.value = year;
+    option.textContent = year;
+    yearSelect.appendChild(option);
+  });
+}
+
+function displayAlumni(data) {
+  const container = document.getElementById("alumniGrid");
+  container.innerHTML = "";
+  if (data.length === 0) {
+    container.innerHTML = "<p>No alumni found.</p>";
+    return;
+  }
+  data.forEach(a => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+      <img src="${a['Image Link'] || 'https://via.placeholder.com/100'}" alt="${a.Name}">
+      <h3>${a.Name}</h3>
+      <p><strong>Year:</strong> ${a.Year || "N/A"}</p>
+      <p><strong>Role:</strong> ${a.Role || "N/A"}</p>
+      <p>${a.Testimonial || ""}</p>
+    `;
+    container.appendChild(card);
+  });
+}
+
+document.getElementById("search").addEventListener("input", filterData);
+document.getElementById("yearFilter").addEventListener("change", filterData);
+
+function filterData() {
+  const searchVal = document.getElementById("search").value.toLowerCase();
+  const yearVal = document.getElementById("yearFilter").value;
+  const filtered = alumniData.filter(a => {
+    const matchesSearch = a.Name.toLowerCase().includes(searchVal) || a.Role.toLowerCase().includes(searchVal);
+    const matchesYear = yearVal === "" || a.Year === yearVal;
+    return matchesSearch && matchesYear;
+  });
+  displayAlumni(filtered);
+}
+</script>
+
+</body>
+</html>
