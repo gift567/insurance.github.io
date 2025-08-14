@@ -107,7 +107,7 @@
       overflow: hidden;
     }
 
-    .slide {
+    .slide {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
       position: absolute;
       width: 100%;
       height: 100%;
@@ -241,6 +241,93 @@
     }
 
     /* Header Section */
+
+
+
+    /* footer */
+
+    
+
+
+  
+      footer {
+        background-color: #0054a7;
+        color: #fff;
+        padding: 20px 10px;
+      }
+  
+      .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+      }
+  
+      .footer-column {
+        flex: 1 1 calc(25% - 20px);
+        min-width: 200px;
+      }
+  
+      .footer-column h4 {
+        margin-bottom: 10px;
+        font-size: 18px;
+        border-bottom: 2px solid #fff;
+        display: inline-block;
+      }
+  
+      .footer-column ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+  
+      .footer-column ul li {
+        margin-bottom: 10px;
+      }
+  
+      .footer-column ul li a {
+        color: #fff;
+        text-decoration: none;
+      }
+  
+      .footer-column ul li a:hover {
+        text-decoration: underline;
+      }
+  
+      .footer-column .form-container {
+        margin-top: 10px;
+      }
+  
+      .footer-column input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 5px;
+      }
+  
+      .footer-column button {
+        width: 100%;
+        padding: 10px;
+        background-color: #0054a7;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+  
+      .footer-column button:hover {
+        background-color:  rgb(42, 5, 207);
+      }
+  
+      @media (max-width: 768px) {
+        .footer-column {
+          flex: 1 1 100%;
+        }
+      }
+
+
+
   </style>
 
 <body>
@@ -253,11 +340,11 @@
 
     <nav>
       <ul>
-        <li><a href="#">HOME</a></li>
+        <li><a href="index.html">HOME</a></li>
         <li><a href="about-us.html">ABOUT</a></li>
         <li><a href="chose.html">COURSES</a></li>
         <li><a href="alumni.html">ALUMNI</a></li>
-        <li><a href="#">CONTACT SUPPORT</a></li>
+        <li><a style="color: #0054a7;" href="#">CONTACT</a></li>
       </ul>
       <div class="hamburger" onclick="toggleMenu()">
         <div></div><div></div><div></div>
@@ -266,8 +353,8 @@
 
     <div class="contact-info">
       <span><i class="fas fa-envelope"></i> info@college.edu</span>
-      <span><i class="fas fa-phone"></i> +260 123 456 789</span>
-      <span><i class="fas fa-phone"></i> +260 123 456 789</span>
+      <span><i class="fas fa-phone"></i> +260979 446457</span>
+      <span><i class="fas fa-phone"></i> +260979 905802</span>
       <span><i class="fab fa-facebook"></i></span>
       <span><i class="fab fa-twitter"></i></span>
       <span><i class="fab fa-instagram"></i></span>
@@ -278,8 +365,8 @@
    <a href="#">HOME</a>
         <a href="about-us.html">ABOUT</a>
         <a href="chose.html">COURSES</a>
-        <a href="#">ALUMNI</a>
-        <a href="#">CONTACT SUPPORT</a>
+        <li><a href="alumni.html">ALUMNI</a></li>
+        <li><a style="color: #0054a7;" href="#">CONTACT</a></li>
   </div>
 
   <div class="slider">
@@ -287,42 +374,21 @@
       <div class="slide-content">
         <h1 style="color: #fff;">Weclome to ZCPIT</h1>
         <p style="text-align: center; align-items: center; color: #fff;">ZCPIT is the premier college dedicated to providing comprehensive professional education and vocational training in insurance, Pensions and other related Business studies.</p>
-        <div class="buttons">
-          <a href="https://my.zcpit.astrialearning.com/apply">Apply Now</a>
-          <a href="./academics/course.html">Programs List</a>
-        </div>
+        
       </div>
     </div>
-    <div class="slide" style="background-image: url('./assets/images/Luso\ creative\ space\ \(145\).jpg'); opacity: 0;">
-      <div class="slide-content">
-        <h1 style="color: #fff;">Who Are We</h1>
-        <p style="color: #fff;">Empowering the next generation of leaders through quality education, innovation, and community.</p>
-        <div class="buttons">
-          <a href="#">Call Now</a>
-          <a href="./about-us.html">Learn More</a>
-        </div>
-      </div>
-    </div>
-    <div class="slide" style="background-image: url('./assets/images/Luso\ creative\ space\ \(63\).jpg'); opacity: 0;">
-      <div class="slide-content">
-        <h1 style="color: #fff;">Lets Connect</h1>
-        <p style="color: #fff;">Empowering the next generation of leaders through quality education, innovation, and community.</p>
-        <div class="buttons">
-          <a href="#">Request Meeting</a>
-          <a href="https://my.zcpit.astrialearning.com/apply">Apply Now</a>
-        </div>
-      </div>
-    </div>
+   
+  
 
-    <div class="arrows">
+    <!-- <div class="arrows">
       <i class="fas fa-chevron-left" onclick="prevSlide()"></i>
       <i class="fas fa-chevron-right" onclick="nextSlide()"></i>
-    </div>
-    <div class="dots">
+    </div> -->
+    <!-- <div class="dots">
       <span onclick="showSlide(0)" class="active"></span>
       <span onclick="showSlide(1)"></span>
       <span onclick="showSlide(2)"></span>
-    </div>
+    </div> -->
   </div>
 
   <script>
@@ -384,14 +450,19 @@
               <div class="info-item">
                 <i class="fa fa-phone"></i>
                 <h4>Phone Number</h4>
-                <a href="#">010-020-0340</a>
+                <a href="#">+260 979 446457</a>
+                <br>
+                <a href="#">+260 979 685 563</a>
+                 <br>
+                 <a href="#">+260 979 905 802</a>
               </div>
             </div>
+            
             <div class="col-lg-4">
               <div class="info-item">
                 <i class="fa fa-map-marked-alt"></i>
                 <h4>Address</h4>
-                <a href="#">Victoria, Australia</a>
+                <a href="#">Kelvin Siwale Road, Lusaka, Zambia</a>
               </div>
             </div>
           </div>
@@ -427,11 +498,7 @@
                   <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your E-mail..." required="">
                 </fieldset>
               </div>
-              <div class="col-lg-6">
-                <fieldset>
-                  <input type="subject" name="subject" id="subject" placeholder="Subject..." autocomplete="on" >
-                </fieldset>
-              </div>
+              
               <div class="col-lg-12">
                 <fieldset>
                   <textarea name="message" id="message" placeholder="Your Message"></textarea>
@@ -449,50 +516,50 @@
     </div>
   </section>
 
-  <section class="partners">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-2 col-sm-4 col-6">
-          <div class="item">
-            <img src="assets/images/client-01.png" alt="">
-          </div>
-        </div>
-        <div class="col-lg-2 col-sm-4 col-6">
-          <div class="item">
-            <img src="assets/images/client-01.png" alt="">
-          </div>
-        </div>
-        <div class="col-lg-2 col-sm-4 col-6">
-          <div class="item">
-            <img src="assets/images/client-01.png" alt="">
-          </div>
-        </div>
-        <div class="col-lg-2 col-sm-4 col-6">
-          <div class="item">
-            <img src="assets/images/client-01.png" alt="">
-          </div>
-        </div>
-        <div class="col-lg-2 col-sm-4 col-6">
-          <div class="item">
-            <img src="assets/images/client-01.png" alt="">
-          </div>
-        </div>
-        <div class="col-lg-2 col-sm-4 col-6">
-          <div class="item">
-            <img src="assets/images/client-01.png" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<br>
+<br>
+<br>
 
   <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <p>Copyright © 2022 Mexant Co., Ltd. All Rights Reserved. 
-          
-          <br>Designed by <a title="CSS Templates" rel="sponsored" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
+    <div class="footer-container">
+      <!-- Column 1 -->
+      <div class="footer-column">
+        <h4 style="color: #fff;">About Us</h4>
+        <ul>
+          <li><a href="about-us.html">Our History</a></li>
+          <li><a href="about-us.html">Our Mission</a></li>
+          <li><a href="about-us.html">Our Vision</a></li>
+        </ul>
+      </div>
+  
+      <!-- Column 2 -->
+      <div class="footer-column">
+        <h4 style="color: #fff;">Our Courses</h4>
+        <ul>
+          <li><a href="./academics/courses/Diploma in Insurance.html">Diploma in Insurance</a></li>
+          <li><a href="./academics/courses/diploma zciilt.html">Diploma in Transport and Logistics</a></li>
+          <li><a href="./academics/courses/Financialadministration.html">Diploma in Financial Administration</a></li>
+        </ul>
+      </div>
+  
+      <!-- Column 3 -->
+      <div class="footer-column">
+        <h4 style="color: #fff;">Quick Links</h4>
+        <ul>
+          <li><a href="https://my.zcpit.astrialearning.com/apply">E-Learning</a></li>
+          <li><a href="./academics/course.html">Progams List</a></li>
+          <li><a href="#">Stock Brokers</a></li>
+        </ul>
+      </div>
+  
+      <!-- Column 4 (Form) -->
+      <div class="footer-column">
+        <h4 style="text-decoration: none; color: #fff;">Subscribee</h4>
+        <div class="form-container">
+          <form action="#" method="POST">
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
         </div>
       </div>
     </div>

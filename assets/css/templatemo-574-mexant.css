@@ -1621,7 +1621,7 @@ section.map .info-item:hover {
 
 section.map .info-item i {
   font-size: 36px;
-  color: #43ba7f;
+  color: #0054a7;
   margin-bottom: 25px;
 }
 
@@ -1635,12 +1635,12 @@ section.map .info-item h4 {
 section.map .info-item a {
   font-size: 15px;
   font-weight: 600;
-  color: #43ba7f;
+  color: #0054a7;
   transition: all 0.3s;
 }
 
 section.map .info-item a:hover {
-  color: #ff511a;
+  color: #6199d0;
 }
 
 #contact input {
@@ -1678,7 +1678,7 @@ section.map .info-item a:hover {
 #contact button.orange-button {
   font-size: 14px;
   color: #fff;
-  background-color: #ff511a;
+  background-color: #0054a7 ;
   padding: 12px 30px;
   display: inline-block;
   border-radius: 5px;
@@ -1690,7 +1690,7 @@ section.map .info-item a:hover {
 }
 
 #contact button.orange-button:hover {
-  background-color: #43ba7f;
+  background-color: #6199d0;
 }
 
 
