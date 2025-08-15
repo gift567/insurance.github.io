@@ -3,88 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Alumni</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-      background: #f4f4f4;
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #333;
-    }
-    #alumni-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .alumni-card {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      padding: 20px;
-      text-align: center;
-      transition: transform 0.2s;
-    }
-    .alumni-card:hover {
-      transform: translateY(-5px);
-    }
-    .alumni-card img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      margin-bottom: 15px;
-    }
-    .alumni-card h3 {
-      margin: 0;
-      color: #0073aa;
-    }
-    .alumni-card p {
-      margin: 8px 0;
-      color: #555;
-      font-size: 14px;
-    }
-    @media(max-width: 600px) {
-      .alumni-card img {
-        width: 80px;
-        height: 80px;
-      }
-    }
-  </style>
+  <title>Document</title>
 </head>
 <body>
+  
 
-<h1>Our Alumni</h1>
-<div id="alumni-list">Loading...</div>
+<section class="short-courses">
+  <div class="courses-wrapper">
 
-<script>
-   const sheetUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQivfTZUXys30UvgLpzo1bVHeW6LXCPp6w2QjxeRVS9B56OijjvQw23CH4wNZY_h5fctC7_57BtHJ1A/pub?gid=0&single=true&output=csv"; // Paste your CSV link here
+    <!-- Left Side: Image Slider -->
+    <div class="courses-slider">
+      <div class="slider-track">
+        <img src="./assets/images/short1.jpg" alt="Course 1">
+        <img src="./assets/images/short2.jpg" alt="Course 2">
+        <img src="./assets/images/short3.jpg" alt="Course 3">
+      </div>
+    </div>
 
-  fetch(sheetUrl)
-    .then(res => res.text())
-    .then(csv => {
-      const rows = csv.split("\n").slice(1); // Skip header row
-      const container = document.getElementById("alumni-list");
-      container.innerHTML = "";
-      rows.forEach(row => {
-        const [name, year, role, testimonial, img] = row.split(",");
-        if (!name) return;
-        container.innerHTML += `
-          <div class="alumni-card">
-            <img src="${img || 'https://via.placeholder.com/100'}" alt="${name}">
-            <h3>${name}</h3>
-            <p><strong>${year}</strong> - ${role}</p>
-            <p>${testimonial}</p>
-          </div>
-        `;
-      });
-    });
-</script>
+    <!-- Right Side: Courses Table -->
+    <div class="courses-container">
+      <h2>Short Courses</h2>
+      <table>
+        <tr>
+          <th>Apply</th>
+          <th>Course</th>
+          <th>Duration</th>
+          <th>Mode</th>
+        </tr>
+        <tr>
+          <td><button class="apply-btn">Apply</button></td>
+          <td>
+            <details>
+              <summary>Project Management Fundamentals</summary>
+              <p>Learn project planning, budgeting, and stakeholder communication.</p>
+            </details>
+          </td>
+          <td><span class="badge">6 weeks</span></td>
+          <td><span class="badge">Blended</span></td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+
+<style>
+
+.courses-slider {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.slider-track {
+  display: flex;
+  animation: slide 12s infinite;
+}
+
+.slider-track img {
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  30% { transform: translateX(0); }
+  35% { transform: translateX(-100%); }
+  65% { transform: translateX(-100%); }
+  70% { transform: translateX(-200%); }
+  100% { transform: translateX(-200%); }
+}
+
+/* Make responsive */
+@media (max-width: 768px) {
+  .courses-slider img {
+    height: 250px;
+    object-fit: cover;
+  }
+}
+
+</style>
 
 </body>
 </html>

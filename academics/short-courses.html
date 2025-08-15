@@ -1,458 +1,815 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">    
-    <title>ZCPIT | Short Courses </title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZCPIT | SHort Courses</title>
+</head>
+<body>
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="../assets/images/zcpitlogo.jpg" type="image/x-icon">
 
-    <!-- Font awesome -->
-    <link href="./assets/css/font-awesome.css" rel="stylesheet">
-    <!-- Bootstrap -->
-    <link href="./assets/css/bootstrap.css" rel="stylesheet">   
-    <!-- Slick slider -->
-    <link rel="stylesheet" type="text/css" href="./assets/css/slick.css">          
-    <!-- Fancybox slider -->
-    <link rel="stylesheet" href="./assets/css/jquery.fancybox.css" type="text/css" media="screen" /> 
-    <!-- Theme color -->
-    <link id="switcher" href="./assets/css/theme-color/default-theme.css" rel="stylesheet">  
+  <header>
+    <div class="logo">
+      <img src="../assets/images/zcpitlogo-removebg-preview.png" alt="College Logo" />
+    </div>
 
-    <!-- Main style sheet -->
-    <link href="./assets/css/style.css" rel="stylesheet">    
+    <nav>
+      <ul>
+        <li><a style="color: #0054a7;" href="../index.html">HOME</a></li>
+        <li><a href="../about-us.html">ABOUT</a></li>
+        <li><a href="../chose.html">COURSES</a></li>
+        <li><a href="../alumni.html">ALUMNI</a></li>
+        <li><a href="../contact-us.html">CONTACT</a></li>
+       
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div><div></div><div></div>
+      </div>
+    </nav>
 
-   
-    <!-- Google Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,300,300italic,500,700' rel='stylesheet' type='text/css'>
+    <div class="contact-info">
+      <span><i class="fas fa-envelope"></i> info@college.edu</span>
+      <span><i class="fas fa-phone"></i> +260979 446457</span>
+      <span><i class="fas fa-phone"></i> +260979 905802</span>
+      <span><i class="fab fa-facebook"></i></span>
+      <span><i class="fab fa-twitter"></i></span>
+      <span><i class="fab fa-instagram"></i></span>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+   <a href="#">HOME</a>
+        <a href="about-us.html">ABOUT</a>
+        <a href="chose.html">COURSES</a>
+        <a href="#">ALUMNI</a>
+        <a href="#">CONTACT SUPPORT</a>
+  </div>
+
+
+
+  <div class="slider">
+    <div class="slide" style="background-image: url('../assets/images/Luso\ creative\ space\ \(65\).jpg'); opacity: 1;">
+      <div class="slide-content">
+        <h1 style="color: #fff;">Short Courses</h1>
+        <p style="text-align: center; align-items: center; color: #fff;">ZCPIT is the premier college dedicated to providing comprehensive professional education and vocational training in insurance, Pensions and other related Business studies.</p>
+      
+      </div>
+    </div>
+  
     
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-  </head>
-  <body>
-  <!--START SCROLL TOP BUTTON -->
-    <a class="scrollToTop" href="#">
-      <i class="fa fa-angle-up"></i>      
-    </a>
-  <!-- END SCROLL TOP BUTTON -->
-
-  <!-- Start header  -->
   
-  <!-- End header  -->
-  <!-- Start menu -->
-  <section id="mu-menu">
-    <nav class="navbar navbar-default" role="navigation">  
-      <div class="container">
-        <div class="navbar-header">
-          <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <!-- LOGO -->              
-          <!-- TEXT BASED LOGO -->
-          <a class="navbar-brand" href="index.html"><img src="../assets/images/zcpitlogo.jpg"></a>
-          <!-- IMG BASED LOGO  -->
-          <!-- <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="logo"></a> -->
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
-            <li><a href="../index.html">Home</a></li>  
-
-            <li class="dropdown active">
-              <a href="#" class="dropdown-toggle active" data-toggle="dropdown">Course <span class="fa fa-angle-down"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="course.html">Conventional Courses</a></li>                
-                <li><a href="short-courses.html">Short Courses</a></li>                
-              </ul>
-            </li>      
-                 
-            <li><a href="../about-us.html">About</a></li>
-
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Student Life <span class="fa fa-angle-down"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="blog-archive.html">Students</a></li>                
-                <li><a href="blog-single.html">Aluminia</a></li>                
-              </ul>
-            </li>   
-
-            <li><a href="contact.html">Contact</a></li>
-          
-          </ul>                   
-        </div><!--/.nav-collapse -->        
-      </div>     
-    </nav>
-  </section>
-  <!-- End menu -->
-  <!-- Start search box -->
-  <div id="mu-search">
-    <div class="mu-search-area">      
-      <button class="mu-search-close"><span class="fa fa-close"></span></button>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">            
-            <form class="mu-search-form">
-              <input type="search" placeholder="Type Your Keyword(s) & Hit Enter">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!--  -->
   </div>
-  <!-- End search box -->
- <!-- Page breadcrumb -->
- <section id="mu-page-breadcrumb">
-   <div class="container">
-     <div class="row">
-       <div class="col-md-12">
-         <div class="mu-page-breadcrumb-area">
-           <h2>Welcome to our Short Courses</h2>
-           <ol class="breadcrumb">
-            <li><a href="../index.html">Home</a></li>            
-            <li class="active">Short Courses</li>
-          </ol>
-         </div>
-       </div>
-     </div>
-   </div>
- </section>
- <!-- End breadcrumb -->
- <section id="mu-course-content">
-   <div class="container">
-     <div class="row">
-       <div class="col-md-12">
-         <div class="mu-course-content-area">
-            <div class="row">
-              <div class="col-md-9">
-
-                <!-- start course content container -->
-                <div class="mu-course-container">
-                  <div class="row">
-                    <div class="col-md-6 col-sm-6">
-                    <div class="mu-latest-course-single">
-                      <figure class="mu-latest-course-img">
-                       <a href="#"><img src="./assets/img/zcpit ad.jpeg" alt="img"></a>
-                        <figcaption class="mu-latest-course-imgcaption">
-                          <a href="#">Logistics and Transport</a>
-                          <span><i class="fa fa-clock-o"></i> 6 weeks</span>
-                        </figcaption>
-                      </figure>
-                      <div class="mu-latest-course-single-content">
-                        <h4><a href="#">Description</a></h4>
-                        <p>This is a short Course program in ICT of 6 weeks duration the applicant can be 
-                          empowered to use computers with confidence and apply IT skills to do certain tasks 
-                          in formal or informal sectors.</p>
-                        <div class="mu-latest-course-single-contbottom">
-                          <a class="mu-course-details" href="#">Details</a>
-                          <span class="mu-course-price" href="#">k15,00.00</span>
-                        </div>
-                      </div>
-                    </div> 
-                  </div>   
-
-                  <div class="col-md-6 col-sm-6">
-                    <div class="mu-latest-course-single">
-                      <figure class="mu-latest-course-img">
-                      <a href="#"><img src="./assets/img/zcpit ad.jpeg" alt="img"></a>
-                        <figcaption class="mu-latest-course-imgcaption">
-                          <a href="#">Motor Assessors</a>
-                          <span><i class="fa fa-clock-o"></i> 6 weeks</span>
-                        </figcaption>
-                      </figure>
-                      <div class="mu-latest-course-single-content">
-                        <h4><a href="#">Description</a></h4>
-                        <p>This is a short Course program in Financial Literacy of 6 weeks duration upon 
-                          completion the participant is able to prepare personal and business budget and 
-                          business plans.</p>
-                        <div class="mu-latest-course-single-contbottom">
-                          <a class="mu-course-details" href="#">Details</a>
-                          <span class="mu-course-price" href="#">k15,00.00</span>
-                        </div>
-                      </div>
-                    </div> 
-                  </div>      
-
-                  <div class="col-md-6 col-sm-6">
-                    <div class="mu-latest-course-single">
-                      <figure class="mu-latest-course-img">
-                        <a href="#"><img src="./assets/img/zcpit ad.jpeg" alt="img"></a>
-                        <figcaption class="mu-latest-course-imgcaption">
-                          <a href="#">Entrepreneurship</a>
-                          <span><i class="fa fa-clock-o"></i>6 weeks</span>
-                        </figcaption>
-                      </figure>
-                      <div class="mu-latest-course-single-content">
-                        <h4><a href="#">Description</a></h4>
-                        <p>This is a short Course program in Entrepreneurship of 6 week duration. Upon 
-                          completion participants are equipped to start a business with confidence.</p>
-                        <div class="mu-latest-course-single-contbottom">
-                          <a class="mu-course-details" href="#">Details</a>
-                          <span class="mu-course-price" href="#">k15,00.00</span>
-                        </div>
-                      </div>
-                    </div> 
-                  </div>      
-
-
-                  <div class="col-md-6 col-sm-6">
-                    <div class="mu-latest-course-single">
-                      <figure class="mu-latest-course-img">
-                       <a href="#"><img src="./assets/img/zcpit ad.jpeg" alt="img"></a>
-                        <figcaption class="mu-latest-course-imgcaption">
-                          <a href="#">Investment Advisors and Stockbrokers</a>
-                          <span><i class="fa fa-clock-o"></i>6 weeks</span>
-                        </figcaption>
-                      </figure>
-                      <div class="mu-latest-course-single-content">
-                        <h4><a href="#">Description</a></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet quod nisi quisquam modi dolore, dicta obcaecati architecto quidem ullam quia.</p>
-                        <div class="mu-latest-course-single-contbottom">
-                          <a class="mu-course-details" href="#">Details</a>
-                          <span class="mu-course-price" href="#">k15,00.00</span>
-                        </div>
-                      </div>
-                    </div> 
-                  </div>      
 
 
 
-                  <div class="col-md-6 col-sm-6">
-                    <div class="mu-latest-course-single">
-                      <figure class="mu-latest-course-img">
-                       <a href="#"><img src="./assets/img/zcpit ad.jpeg" alt="img"></a>
-                        <figcaption class="mu-latest-course-imgcaption">
-                            <a href="#">Pension Administration and Management</a>
-                          <span><i class="fa fa-clock-o"></i>2 years</span>
-                        </figcaption>
-                      </figure>
-                      <div class="mu-latest-course-single-content">
-                        <h4><a href="#">Description.</a></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet quod nisi quisquam modi dolore, dicta obcaecati architecto quidem ullam quia.</p>
-                        <div class="mu-latest-course-single-contbottom">
-                          <a class="mu-course-details" href="#">Details</a>
-                          <span class="mu-course-price" href="#">k15,00.00</span>
-                        </div>
-                      </div>
-                    </div> 
-                  </div>    
-                  
-                  
-
-                  
-                  
 
 
-                  </div>
-                </div>
-                <!-- end course content container -->
-                <!-- start course pagination -->
-                <div class="mu-pagination">
-                  <nav>
-                    <ul class="pagination">
-                      <li>
-                        <a href="#" aria-label="Previous">
-                          <span class="fa fa-angle-left"></span> Prev 
-                        </a>
-                      </li>
-                      <li class="active"><a href="#">1</a></li>
-                      <li><a href="#">2</a></li>
-                      <li><a href="#">3</a></li>
-                      <li><a href="#">4</a></li>
-                      <li><a href="#">5</a></li>
-                      <li>
-                        <a href="#" aria-label="Next">
-                         Next <span class="fa fa-angle-right"></span>
-                        </a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-                <!-- end course pagination -->
-              </div>
-              <div class="col-md-3">
-                <!-- start sidebar -->
-                <aside class="mu-sidebar">
-                  <!-- start single sidebar -->
-                  <div class="mu-single-sidebar">
-                    <h3>Other Short Courses</h3>
-                    <ul class="mu-sidebar-catg">
-                      <li><a href="#"> Certificate in Para Legal Studies</a></li>
-                      <li><a href="">Certificate in Insurance</a></li>
-                      <li><a href=""> Diploma in Insurance</a></li>
-                      <li><a href="">Diploma in Financial Administration</a></li>
-                      <li><a href="">Diploma in Financial Administration</a></li>
-                      <li><a href=""> Diploma in Accountancy (ZICA)</a></li>
-                    </ul>
-                  </div>
-                  <!-- end single sidebar -->
-                  <!-- start single sidebar -->
-                  <div class="mu-single-sidebar">
-                    <h3>Popular Course</h3>
-                    <div class="mu-sidebar-popular-courses">
-                      <div class="media">
-                        <div class="media-left">
-                          <a href="#">
-                            <img class="media-object" src="assets/img/courses/1.jpg" alt="img">
-                          </a>
-                        </div>
-                        <div class="media-body">
-                          <h4 class="media-heading"><a href="#">Insurance</a></h4>                      
-                          <span class="popular-course-price">k6,000</span>
-                        </div>
-                      </div>
-                      <div class="media">
-                        <div class="media-left">
-                          <a href="#">
-                            <img class="media-object" src="assets/img/courses/2.jpg" alt="img">
-                          </a>
-                        </div>
-                        <div class="media-body">
-                          <h4 class="media-heading"><a href="#">Transport and Logistics</a></h4>                      
-                          <span class="popular-course-price">k6,000</span>
-                        </div>
-                      </div>
-                      <div class="media">
-                        <div class="media-left">
-                          <a href="#">
-                            <img class="media-object" src="assets/img/courses/3.jpg" alt="img">
-                          </a>
-                        </div>
-                        <div class="media-body">
-                          <h4 class="media-heading"><a href="#"> Diploma in Accountancy (ZICA)</a></h4>                      
-                          <span class="popular-course-price">k6,000</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- end single sidebar -->
-                  <!-- start single sidebar -->
-                  <div class="mu-single-sidebar">
-                    <h3>Semester Dates</h3>
-                    <ul class="mu-sidebar-catg mu-sidebar-archives">
-                      <li><a href="#">January - <span>July</span></a></li>
-                      <li><a href="#">January - <span>July</span></a></li>
-                      <li><a href="#">January - <span>July</span></a></li>
-                      
-                    </ul>
-                  </div>
-                  <!-- end single sidebar -->
-                  <!-- start single sidebar -->
-                  <div class="mu-single-sidebar">
-                    <h3>Short Courses</h3>
-                    <div class="tag-cloud">
-                      <a href="#">Insurance</a>
-                      <a href="#">ICT</a>
-                     
-                    </div>
-                  </div>
-                  <!-- end single sidebar -->
-                </aside>
-                <!-- / end sidebar -->
-             </div>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
- </section>
- <!-- Start footer -->
- <footer id="mu-footer">
-    <!-- start footer top -->
-    <div class="mu-footer-top">
-      <div class="container">
-        <div class="mu-footer-top-area">
-          <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-3">
-              <div class="mu-footer-widget">
-                <h4>Information</h4>
-                <ul>
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="">Short-Course</a></li>
-                  <li><a href="">History</a></li>
-                  <li><a href="">Location</a></li>
-                  <li><a href="">FAQ</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-3">
-              <div class="mu-footer-widget">
-                <h4>Student Registration</h4>
-                <ul>
-                  <li><a href="">Student Registration</a></li>
-                  <li><a href="#">My Questions</a></li>                 
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-3">
-              <div class="mu-footer-widget">
-                <h4>News letter</h4>
-                <p>Get latest update, news & academic offers</p>
-                <form class="mu-subscribe-form">
-                  <input type="email" placeholder="Type your Email">
-                  <button class="mu-subscribe-btn" type="submit">Subscribe!</button>
-                </form>               
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-3">
-              <div class="mu-footer-widget">
-                <h4>Contact</h4>
-                <address>
-                  <p>P.O. Box </p>
-                  <p>Phone: </p>
-                  <p>Website: www.zambia college of pension and insuranvce trust.com</p>
-                  <p>Email: </p>
-                </address>
-              </div>
-            </div>
-          </div>
+<!-- // SLIDER SCRIPT for header start -->
+  <script>
+    // SLIDER SCRIPT
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dots span');
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.opacity = i === index ? '1' : '0';
+        dots[i].classList.toggle('active', i === index);
+      });
+      currentSlide = index;
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    setInterval(nextSlide, 8000);
+
+    // MOBILE MENU TOGGLE
+    function toggleMenu() {
+      document.getElementById("mobileMenu").classList.toggle("show");
+    }
+  </script>
+
+
+<!-- // SLIDER SCRIPT for header start -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="short-courses">
+    <div class="courses-wrapper">
+        
+        <!-- Left Side -->
+        <div class="courses-intro">
+            <h1>Explore Our<br> Short Courses</h1>
+            <p>Upgrade your skills with our practical, hands-on training programs designed for career growth.</p>
+        </div>
+
+        <!-- Right Side -->
+        <div class="courses-container">
+            <h2>Short Courses</h2>
+            <table>
+                <tr>
+                    <th>Apply</th>
+                    <th>Course</th>
+                    <th>Duration</th>
+                    <th>Mode</th>
+                </tr>
+
+                <tr>
+                    <td><button class="apply-btn">Apply</button></td>
+                    <td>
+                        <details>
+                            <summary>Project Management Fundamentals</summary>
+                            <p>Learn project planning, budgeting, and stakeholder communication.</p>
+                        </details>
+                    </td>
+                    <td><span class="badge">6 weeks</span></td>
+                    <td><span class="badge">Blended</span></td>
+                </tr>
+
+                <tr>
+                    <td><button class="apply-btn">Apply</button></td>
+                    <td>
+                        <details>
+                            <summary>Graphic Design for Beginners</summary>
+                            <p>Principles of design using Adobe Illustrator & Photoshop.</p>
+                        </details>
+                    </td>
+                    <td><span class="badge">4 weeks</span></td>
+                    <td><span class="badge">On-Campus</span></td>
+                </tr>
+
+
+                <tr>
+                    <td><button class="apply-btn">Apply</button></td>
+                    <td>
+                        <details>
+                            <summary>Graphic Design for Beginners</summary>
+                            <p>Principles of design using Adobe Illustrator & Photoshop.</p>
+                        </details>
+                    </td>
+                    <td><span class="badge">4 weeks</span></td>
+                    <td><span class="badge">On-Campus</span></td>
+                </tr>
+
+             
+            </table>
+        </div>
+    </div>
+</section>
+<br>
+
+
+  <section class="programs-section">
+    <div class="programs-wrapper">
+
+        <!-- LEFT SIDE IMAGE -->
+        <div class="programs-image">
+            <img src="../assets/images/WhatsApp_Image_2024-11-04_at_10.10.44-removebg-preview.png" alt="Students Learning">
+        </div>
+
+        <!-- RIGHT SIDE CONTENT -->
+        <div class="programs-box">
+            <h2>Other Short-Courses</h2>
+
+            <details>
+                <summary>Project Management Fundamentals</summary>
+                <p>Learn project planning, budgeting, and communication to lead teams effectively.</p>
+                <button class="apply-btn">Apply</button>
+            </details>
+
+            <details>
+                <summary>Graphic Design for Beginners</summary>
+                <p>Master design principles using Adobe Illustrator and Photoshop.</p>
+                <button class="apply-btn">Apply</button>
+            </details>
+
+            <details>
+                <summary>Bookkeeping & Payroll Essentials</summary>
+                <p>Gain skills in payroll systems, bookkeeping, and accounting software.</p>
+                <button class="apply-btn">Apply</button>
+            </details>
+        </div>
+    </div>
+</section>
+
+
+
+  <footer>
+    <div class="footer-container">
+      <!-- Column 1 -->
+      <div class="footer-column">
+        <h4 style="color: #fff;">About Us</h4>
+        <ul>
+          <li><a href="about-us.html">Our History</a></li>
+          <li><a href="about-us.html">Our Mission</a></li>
+          <li><a href="about-us.html">Our Vision</a></li>
+        </ul>
+      </div>
+  
+      <!-- Column 2 -->
+      <div class="footer-column">
+        <h4 style="color: #fff;">Our Courses</h4>
+        <ul>
+          <li><a href="./academics/courses/Diploma in Insurance.html">Diploma in Insurance</a></li>
+          <li><a href="./academics/courses/diploma zciilt.html">Diploma in Transport and Logistics</a></li>
+          <li><a href="./academics/courses/Financialadministration.html">Diploma in Financial Administration</a></li>
+        </ul>
+      </div>
+  
+      <!-- Column 3 -->
+      <div class="footer-column">
+        <h4 style="color: #fff;">Quick Links</h4>
+        <ul>
+          <li><a href="https://my.zcpit.astrialearning.com/apply">E-Learning</a></li>
+          <li><a href="./academics/course.html">Progams List</a></li>
+          <li><a href="#">Stock Brokers</a></li>
+        </ul>
+      </div>
+  
+      <!-- Column 4 (Form) -->
+      <div class="footer-column">
+        <h4 style="text-decoration: none; color: #fff;">Subscribee</h4>
+        <div class="form-container">
+          <form action="#" method="POST">
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
         </div>
       </div>
     </div>
-    <!-- end footer top -->
-    <!-- start footer bottom -->
-    <div class="mu-footer-bottom">
-      <div class="container">
-        <div class="mu-footer-bottom-area">
-          <p> Copyright © 2025 The Zambia College of Insurance and Pensions Trust. All Rights Reserved. developed by Bupe Katuele with resource from <a href="http://www.markups.io/" rel="nofollow">MarkUps.io</a></p>
-        </div>
-      </div>
-    </div>
-    <!-- end footer bottom -->
   </footer>
-  <!-- End footer -->
+  
+
+<style>
+
+body{
+   font-family: 'Segoe UI', sans-serif;
+}
+
+  /* Header Section */
+    header {
+      background: #fff ;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 10;
+     
+    }
+    .logo img {
+      height: 50px;
+    }
+    .contact-info {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 0.85rem;
+      color: black;
+    }
+    .contact-info i {
+      margin-right: 5px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      
+    }
+
+    nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    nav ul li a {
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: black;
+      margin: 4px;
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background: #111;
+      width: 100%;
+    }
+
+    .mobile-menu a {
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-bottom: 1px solid #222;
+    }
+
+    /* Slider Section */
+    .slider {
+      position: relative;
+      width: 100%;
+      height: 70vh;
+      overflow: hidden;
+    }
+
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 0 20px;
+      transition: opacity 1s ease;
+    }
+
+    .slide::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .slide-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .slide h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .slide p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-family: Arial;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .buttons a {
+      padding: 10px 20px;
+      background: #fff;
+      color: #000;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .arrows, .dots {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      z-index: 2;
+    }
+
+    .arrows {
+      top: 50%;
+      width: 100%;
+      justify-content: space-between;
+      padding: 0 20px;
+      transform: translateY(-50%);
+    }
+
+    .arrows i {
+      background: white;
+      color: #fff;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    .dots {
+      bottom: 20px;
+      width: 100%;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .dots span {
+      width: 12px;
+      height: 12px;
+      background: #fff;
+      border-radius: 50%;
+      cursor: pointer;
+      opacity: 0.5;
+    }
+
+    .dots .active {
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .mobile-menu.show {
+        display: flex;
+      }
+
+      .contact-info {
+        display: none;
+      }
+
+      .slide h1 {
+        font-size: 2rem;
+      }
+
+      .slide p {
+        font-size: 1rem;
+      }
+
+      .buttons {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
 
 
 
 
+
+
+
+
+
+
+
+.short-courses {
+    padding: 40px 20px;
+    background: rgb(42, 5, 207);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.courses-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+    align-items: start;
+}
+
+.courses-intro h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.courses-intro p {
+    font-size: 1rem;
+    color: #ffffff;
+    max-width: 300px;
+}
+
+.courses-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    overflow-x: auto; /* ✅ allows horizontal scroll if needed */
+}
+
+.courses-container h2 {
+    margin-bottom: 20px;
+    color: #004080;
+}
+
+.courses-container table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px; /* ✅ prevents table from breaking layout */
+}
+
+.courses-container th {
+    background: #e6f0ff;
+    color: #004080;
+    padding: 12px;
+    text-align: left;
+    white-space: nowrap; /* ✅ keeps header text in one line */
+}
+
+.courses-container td {
+    padding: 12px;
+    vertical-align: top;
+}
+
+.courses-container tr:nth-child(even) {
+    background: #f9fbff;
+}
+
+.courses-container tr:hover {
+    background: #eef6ff;
+}
+
+.badge {
+    background: #e6f0ff;
+    color: #004080;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.apply-btn {
+    background: #0073e6;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+.apply-btn:hover {
+    background: #005bb5;
+}
+
+details summary {
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+}
+
+details p {
+    margin-top: 5px;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* ✅ Mobile adjustments */
+@media (max-width: 768px) {
+    .courses-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .courses-intro h1 {
+        font-size: 1.8rem;
+    }
+
+    .courses-intro p {
+        max-width: 100%;
+        font-size: 0.95rem;
+    }
+
+    .courses-container {
+        padding: 15px;
+    }
+
+    .apply-btn {
+        padding: 6px 10px;
+        font-size: 0.85rem;
+    }
+  }
+
+
+
+  /* second section boss */
+
+  .programs-section {
+    padding: 40px 20px;
+    background: #f8f9fa;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.programs-wrapper {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.programs-image img {
+    width: 100%;
+    height: 40rem;
+    border-radius: 8px;
+    object-fit: contain;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.programs-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.programs-box h2 {
+    margin-bottom: 15px;
+    color: #004080;
+}
+
+details {
+    border: 1px solid #ddd;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background: #fefefe;
+}
+
+details summary {
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+}
+
+details p {
+    margin: 10px 0;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.apply-btn {
+    background: #0073e6;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+.apply-btn:hover {
+    background: #005bb5;
+}
+
+@media (max-width: 768px) {
+    .programs-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+ footer {
+        background-color: #0054a7;
+        color: #fff;
+        padding: 20px 10px;
+      }
+  
+      .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+      }
+  
+      .footer-column {
+        flex: 1 1 calc(25% - 20px);
+        min-width: 200px;
+      }
+  
+      .footer-column h4 {
+        margin-bottom: 10px;
+        font-size: 18px;
+        border-bottom: 2px solid #fff;
+        display: inline-block;
+      }
+  
+      .footer-column ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+  
+      .footer-column ul li {
+        margin-bottom: 10px;
+      }
+  
+      .footer-column ul li a {
+        color: #fff;
+        text-decoration: none;
+      }
+  
+      .footer-column ul li a:hover {
+        text-decoration: underline;
+      }
+  
+      .footer-column .form-container {
+        margin-top: 10px;
+      }
+  
+      .footer-column input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 5px;
+      }
+  
+      .footer-column button {
+        width: 100%;
+        padding: 10px;
+        background-color: #0054a7;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+  
+      .footer-column button:hover {
+        background-color:  rgb(42, 5, 207);
+      }
+  
+      @media (max-width: 768px) {
+        .footer-column {
+          flex: 1 1 100%;
+        }
+      }
+
+
+</style>
 
   
-  <!-- jQuery library -->
-  <script src="assets/js/jquery.min.js"></script>  
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="assets/js/bootstrap.js"></script>   
-  <!-- Slick slider -->
-  <script type="text/javascript" src="assets/js/slick.js"></script>
-  <!-- Counter -->
-  <script type="text/javascript" src="assets/js/waypoints.js"></script>
-  <script type="text/javascript" src="assets/js/jquery.counterup.js"></script>  
-  <!-- Mixit slider -->
-  <script type="text/javascript" src="assets/js/jquery.mixitup.js"></script>
-  <!-- Add fancyBox -->        
-  <script type="text/javascript" src="assets/js/jquery.fancybox.pack.js"></script>
-
-  <!-- Custom js -->
-  <script src="assets/js/custom.js"></script> 
-
-  </body>
+</body>
 </html>

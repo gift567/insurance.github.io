@@ -242,8 +242,8 @@ img {
 }
 
 
-.navbar-header a:hover{
-  background-color:rgb(42, 5, 207) ;
+.navbar a:hover{
+color:rgb(42, 5, 207);
 } 
 
 @media only screen and (max-width: 768px) {
@@ -427,44 +427,7 @@ img {
   font-size: 25px;
 }
 
-/*==================
- SERVICE SECTION
-====================*/
-#mu-service {
-  display: inline;
-  float: left;
-  margin-top: -80px;
-  width: 100%;
-}
-#mu-service .mu-service-area {
-  display: inline;
-  float: left;
-  width: 100%;
-}
-#mu-service .mu-service-area .mu-service-single {
-  background-color: rgb(42, 5, 207);
-  color: #fff;
-  display: inline;
-  float: left;
-  padding: 35px 25px;
-  text-align: center;
-  width: 33.33%;
-}
-#mu-service .mu-service-area .mu-service-single:nth-child(2) {
-  background-color: #2ecc71;
-}
-#mu-service .mu-service-area .mu-service-single:nth-child(3) {
-  background-color: rgb(42, 5, 207);
-}
-#mu-service .mu-service-area .mu-service-single span {
-  font-size: 30px;
-}
-#mu-service .mu-service-area .mu-service-single h3 {
-  font-size: 25px;
-}
-#mu-service .mu-service-area .mu-service-single p {
-  font-weight: lighter;
-}
+
 
 /*==================
  ABOUT SECTION
