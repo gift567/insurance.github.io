@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seamless Scrolling Announcements</title>
+  <style>
+    .marquee {
+      position: relative;
+      overflow: hidden;
+      background: #0f172a; /* background color */
+      color: #fff;
+      font-size: 2rem;
+      font-weight: bold;
+      padding: 15px 0;
+      white-space: nowrap;
+    }
+
+    .marquee__inner {
+      display: inline-block;
+      white-space: nowrap;
+      animation: marquee 15s linear infinite;
+    }
+
+    @keyframes marquee {
+      0%   { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .separator {
+      margin: 0 20px;
+      opacity: 0.7;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .marquee { font-size: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="marquee">
+    <div class="marquee__inner">
+      <!-- Announcements repeated twice for seamless loop -->
+      𝗝𝗔𝗡𝗨𝗔𝗥𝗬 𝗜𝗡𝗧𝗔𝗞𝗘 𝗢𝗣𝗘𝗡 – 𝗥𝗘𝗚𝗜𝗦𝗧𝗘𝗥 𝗡𝗢𝗪!
+      <span class="separator">|</span>
+      𝗜𝗡𝗦𝗨𝗥𝗔𝗡𝗖𝗘 𝗔𝗚𝗘𝗡𝗧𝗦 𝗖𝗢𝗨𝗥𝗦𝗘 – 𝗔𝗣𝗣𝗟𝗬 𝗧𝗢𝗗𝗔𝗬!
+      <span class="separator">|</span>
+      𝗝𝗔𝗡𝗨𝗔𝗥𝗬 𝗜𝗡𝗧𝗔𝗞𝗘 𝗢𝗣𝗘𝗡 – 𝗥𝗘𝗚𝗜𝗦𝗧𝗘𝗥 𝗡𝗢𝗪!
+      <span class="separator">|</span>
+      𝗜𝗡𝗦𝗨𝗥𝗔𝗡𝗖𝗘 𝗔𝗚𝗘𝗡𝗧𝗦 𝗖𝗢𝗨𝗥𝗦𝗘 – 𝗔𝗣𝗣𝗟𝗬 𝗧𝗢𝗗𝗔𝗬!
+    </div>
+  </div>
+
+</body>
+</html>

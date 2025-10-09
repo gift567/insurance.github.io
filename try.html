@@ -5,86 +5,190 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
-<body>
-  
-
-<section class="short-courses">
-  <div class="courses-wrapper">
-
-    <!-- Left Side: Image Slider -->
-    <div class="courses-slider">
-      <div class="slider-track">
-        <img src="./assets/images/short1.jpg" alt="Course 1">
-        <img src="./assets/images/short2.jpg" alt="Course 2">
-        <img src="./assets/images/short3.jpg" alt="Course 3">
-      </div>
-    </div>
-
-    <!-- Right Side: Courses Table -->
-    <div class="courses-container">
-      <h2>Short Courses</h2>
-      <table>
-        <tr>
-          <th>Apply</th>
-          <th>Course</th>
-          <th>Duration</th>
-          <th>Mode</th>
-        </tr>
-        <tr>
-          <td><button class="apply-btn">Apply</button></td>
-          <td>
-            <details>
-              <summary>Project Management Fundamentals</summary>
-              <p>Learn project planning, budgeting, and stakeholder communication.</p>
-            </details>
-          </td>
-          <td><span class="badge">6 weeks</span></td>
-          <td><span class="badge">Blended</span></td>
-        </tr>
-      </table>
-    </div>
-
-  </div>
-</section>
-
-
 <style>
 
-.courses-slider {
+.front-banner {
   position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-}
-
-.slider-track {
-  display: flex;
-  animation: slide 12s infinite;
-}
-
-.slider-track img {
   width: 100%;
-  height: auto;
-  flex-shrink: 0;
+  height: 60vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0 2rem;
 }
 
-@keyframes slide {
-  0% { transform: translateX(0); }
-  30% { transform: translateX(0); }
-  35% { transform: translateX(-100%); }
-  65% { transform: translateX(-100%); }
-  70% { transform: translateX(-200%); }
-  100% { transform: translateX(-200%); }
+.front-banner-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  filter: brightness(50%);
 }
 
-/* Make responsive */
+.front-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.front-banner-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  gap: 2rem;
+}
+
+/* Left Card */
+.front-banner-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 500px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  animation: fadeInLeft 1s ease-out;
+}
+
+.front-banner-card h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #0054a7;
+  line-height: 1.3;
+}
+
+.front-banner-card p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.front-apply-btn {
+  background-color: #0054a7;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.front-apply-btn:hover {
+  background-color: #0ea5e9;
+  color: #fff;
+}
+
+/* Right Side Highlight */
+.front-banner-highlight {
+  color: #fff;
+  text-align: right;
+  animation: fadeInRight 1s ease-out;
+}
+
+.front-banner-highlight h2 {
+  font-size: 2.5rem;
+  margin: 0 0 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.front-banner-highlight .highlight-btn {
+  background-color: #0ea5e9;
+}
+
+.front-banner-highlight .highlight-btn:hover {
+  background-color: #0054a7;
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .courses-slider img {
-    height: 250px;
-    object-fit: cover;
+  .front-banner {
+    height: auto;
+    padding: 1rem;
+  }
+
+  .front-banner-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .front-banner-card {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .front-banner-highlight {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .front-banner-highlight h2 {
+    font-size: 2rem;
   }
 }
 
 </style>
+<body>
+  
+
+<section class="front-banner">
+  <img class="front-banner-bg" src="./assets/images/zcpit_img1 (1).jpg" alt="Banner Background">
+  
+  <div class="front-banner-content">
+    <!-- Left Card -->
+    <div class="front-banner-card">
+      <h1>January 2025 Intake Applications</h1>
+      <p>Secure your spot at one of Zambia’s most trusted institutions. Limited spaces available. Apply today and take the next step toward your career!</p>
+      <a href="https://my.zcpit.astrialearning.com/apply" class="front-apply-btn">Apply Now</a>
+    </div>
+
+    <!-- Right Highlight Text -->
+    <div class="front-banner-highlight">
+      <h2>January Intake</h2>
+      <a href="https://my.zcpit.astrialearning.com/apply" class="front-apply-btn highlight-btn">Apply Now</a>
+    </div>
+  </div>
+</section>
+
+
+
 
 </body>
 </html>

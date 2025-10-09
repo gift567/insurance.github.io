@@ -474,9 +474,9 @@
 
     .homepage-course-card img {
       width: 100%;
-      height: 60vh;
+      height: 50vh;
       aspect-ratio: 16 / 9;
-      object-fit: cover;
+      object-fit: contain;
       object-position: center;
       display: block;
     
@@ -777,6 +777,36 @@
   }
   }
       /* modes of learning end of css */
+
+
+      /* word slider */
+
+      .marquee {
+    position: relative;
+    overflow: hidden;
+    background: #0f172a;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 15px 0;
+    white-space: nowrap;
+  }
+  .marquee__inner {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 15s linear infinite;
+  }
+  @keyframes marquee {
+    0%   { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+  .separator {
+    margin: 0 20px;
+    opacity: 0.7;
+  }
+  @media (max-width: 600px) {
+    .marquee { font-size: 1.2rem; }
+  }
     </style>
 
   </head>
@@ -826,14 +856,14 @@
    <a href="#">HOME</a>
         <a href="about-us.html">ABOUT</a>
         <a href="chose.html">COURSES</a>
-        <a href="#">ALUMNI</a>
-        <a href="#">CONTACT SUPPORT</a>
+        <a href="alumni.html">ALUMNI</a>
+        <a href="contact-us.html">CONTACT SUPPORT</a>
   </div>
 
   <div class="slider">
     <div class="slide" style="background-image: url('./assets/images/Luso\ creative\ space\ \(142\).jpg'); opacity: 1;">
       <div class="slide-content">
-        <h1 style="color: #fff;">Weclome to ZCPIT</h1>
+        <h1 style="color: #fff;">Welcome to ZCPIT</h1>
         <p style="text-align: center; align-items: center; color: #fff;">ZCPIT is the premier college dedicated to providing comprehensive professional education and vocational training in insurance, Pensions and other related Business studies.</p>
         <div class="buttons">
           <a href="https://my.zcpit.astrialearning.com/apply">Apply Now</a>
@@ -922,12 +952,33 @@
  <section class="front-banner">
     <img class="front-banner-bg" src="./assets/images/zcpit_img1 (1).jpg" alt="Banner Background">
     <div class="front-banner-content">
-      <h1 style="color: #fff;">July 2025 Intake Applications</h1>
+      <h1 style="color: #fff;">January 2025 Intake Applications</h1>
       <p style="color: #fff;">Secure your spot at one of Zambia’s most trusted institutions. Limited spaces available. Apply today and take the next step toward your career!</p>
       <a style="background-color: #0054a7; color: #fff;" href="https://my.zcpit.astrialearning.com/apply" class="front-apply-btn">Apply Now</a>
     </div>
   </section>
   
+
+
+
+
+
+
+
+<div class="marquee">
+  <div class="marquee__inner">
+    𝗝𝗔𝗡𝗨𝗔𝗥𝗬 𝗜𝗡𝗧𝗔𝗞𝗘 𝗢𝗣𝗘𝗡 – 𝗥𝗘𝗚𝗜𝗦𝗧𝗘𝗥 𝗡𝗢𝗪!
+    <span class="separator">|</span>
+    𝗜𝗡𝗦𝗨𝗥𝗔𝗡𝗖𝗘 WEEK 22 SEPTEMBER 
+    <span class="separator">|</span>
+    STOCK BROKERS ENROLLING - NOW
+    <span class="separator">|</span>
+    CCTOPS ENROLLING - NOW
+  </div>
+</div>
+
+
+
 
 
 
@@ -1131,7 +1182,7 @@
             <h4>Investment Advisors and Stockbrokers (IASBC)</h4>
             <p>This premier professional competence course is offered in collaboration with the Securities Exchange Commission (SEC) & Lusaka Securities Exchange (LuSE) as a prerequisite for licensing by the SEC .</p>
             <div class="service-button">
-              <a href="./Varsity/IASBC.html">Course Details</a>
+              <a href="./Varsity/IASBC.html">APPLY NOW</a>
             </div>
           </div>
         </div>
@@ -1142,7 +1193,7 @@
             <h4>Pensions Administration and Management (CCPAM)</h4>
             <p>This competence course is offered in collaboration with the Zambia Associatiion of Pension Funds (ZAPF) for professionals in the pensions sector. It carries substantive CPD hours for participants and members of the Association.</p>
             <div class="service-button">
-              <a href="./Varsity/ccpam.html">Course Details</a>
+              <a href="./Varsity/ccpam.html">APPLY NOW</a>
             </div>
   
           </div>
@@ -1154,7 +1205,7 @@
             <h4>Logistics & Transport Competence Course (CILT)</h4>
             <p>This premier professional competence course is offered in collaboration with the Chartered Institute of Logistics and Transport (CILT) and is designed as a prerequisite for certification and membership with CILT, empowering professionals in the logistics and transport sector with globally recognized standards.</p>
             <div class="service-button">
-              <a href="./Varsity/cilt.html">Course Details</a>
+              <a href="./Varsity/cilt.html">APPLY NOW</a>
             </div>
           </div>
         </div>
@@ -1165,7 +1216,7 @@
             <h4>Motor Assessors Competence Course (MA)</h4>
             <p>This essential professional course is designed to equip participants with the knowledge and practical skills required for motor vehicle assessment. Offered in collaboration with key industry stakeholders, it serves as a prerequisite for individuals seeking recognition and licensing as certified motor assessors.</p>
             <div class="service-button">
-              <a href="./Varsity/motor.html">Course Details</a>
+              <a href="./Varsity/motor.html">APPLY NOW</a>
             </div>
           </div>
         </div>
@@ -1176,7 +1227,7 @@
             <h4>Insurance Agents Course (IAC)</h4>
             <p>This foundational professional competence course is offered in collaboration with the Pensions and Insurance Authority (PIA) and serves as a prerequisite for licensing as an insurance agent in Zambia, equipping participants with essential knowledge and skills for a successful career in the insurance industry.</p>
             <div class="service-button">
-              <a href="./Varsity/Insurance Agents Course .html">Course Details</a>
+              <a href="./Varsity/Insurance Agents Course .html">APPLY NOW</a>
             </div>
           </div>
         </div>
@@ -1187,23 +1238,14 @@
             <h4>Non Life Underwriting & Claims Management (UCM)</h4>
             <p>This specialized professional competence course is offered in collaboration with the Pensions and Insurance Authority (PIA) and is designed to enhance technical expertise in underwriting and claims handling for non-life insurance. It serves as a key requirement for professionals seeking licensing and career advancement in the general insurance sector.</p>
             <div class="service-button"> 
-              <a href="./Varsity/Non Life Management.html">Course Details</a>
+              <a href="./Varsity/Non Life Management.html">APPLY NOW</a>
             </div>
           </div>
         </div>
 
 
 
-        <!-- <div class="col-lg-6">
-          <div class="service-item">
-            <i class="fas fa-book"></i>
-            <h4>Introduction to Health Insurances</h4>
-            <p>A Diploma in Insurance provides students with foundational knowledge in the insurance industry, covering key areas like underwriting, claims, and risk management. It equips graduates with the skills needed to pursue careers in various sectors of insurance, from sales to policy administration.</p>
-            <div class="service-button">
-              <a href="./Varsity/Introduction to Health Insurance.html">Course Details</a>
-            </div>
-          </div>
-        </div> -->
+     
 
 
         <div class="col-lg-6">
@@ -1212,7 +1254,7 @@
             <h4>Pensions Trustee (CCTOPS)</h4>
             <p>This professional competence course is offered in collaboration with the Pensions and Insurance Authority (PIA) and is a mandatory requirement for individuals serving as pension scheme trustees. It equips participants with the regulatory knowledge and fiduciary responsibilities necessary for effective governance and oversight of pension funds.</p>
             <div class="service-button">
-              <a href="./Varsity/Pensions Trustee (CCTOPS).html">Course Details</a>
+              <a href="./Varsity/Pensions Trustee (CCTOPS).html">APPLY NOW</a>
             </div>
           </div>
         </div>
@@ -1224,7 +1266,7 @@
             <h4>Occupational Health</h4>
             <p>This essential professional competence course is offered in collaboration with key industry and regulatory stakeholders and is designed to equip participants with the knowledge and skills needed to manage workplace health and safety. It serves as a foundational requirement for professionals seeking to promote employee well-being and ensure compliance with occupational health standards.</p>
             <div class="service-button">
-              <a href="/Varsity/Occupational Health.html">Course Details</a>
+              <a href="/Varsity/Occupational Health.html">APPLY NOW</a>
             </div>
           </div>
         </div>
@@ -1237,7 +1279,7 @@
             <h4>Certificate in ICT Skills</h4>
             <p>This practical course equips participants with foundational knowledge in Information and Communication Technology. Learners will gain hands-on skills in essential computer applications such as Microsoft Office (Word, Excel, PowerPoint), internet usage, email communication, basic computer maintenance, and digital literacy empowering them for both academic and professional success in today’s digital world.</p>
             <div class="service-button">
-              <a href="./Varsity/Certificate in ICT Skills.html">Course Details</a>
+              <a href="./Varsity/Certificate in ICT Skills.html">APPLY NOW</a>
             </div>
           </div>
         </div>
@@ -1286,10 +1328,10 @@
         <div class="col-lg-7">
           <div class="buttons">
             <div class="green-button">
-              <a href="about-us.html">Discover More</a>
+              <a href="about-us.html">ABOUT US</a>
             </div>
             <div class="orange-button">
-              <a href="#">Contact Us</a>
+              <a href="contact-us.html">CONTACT US</a>
             </div>
           </div>
         </div>
@@ -1312,12 +1354,12 @@
         </div>
       </div>
 
-      
+       
       <div class="news-one">
         <img src="./assets/images/Luso creative space (142).jpg" alt="News Image 2">
         <div class="news-one-content">
-          <h3 style="font-weight: 600;">Breaking News Title 22</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt quam ut libero ullamcorper...</p>
+          <h3 style="font-weight: 600;">Insurance Week 2025</h3>
+          <p></p>
           <a href="#" class="read-more">Read More</a>
         </div>
       </div>
@@ -1327,8 +1369,8 @@
         <img src="./assets/images/Luso creative space (142).jpg" alt="News Image 3">
         <div class="news-one-content">
           <h3 style="font-weight: 600;" >5th Graduation of ZCPIT</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt quam ut libero ullamcorper...</p>
-          <a href="#" class="read-more">Read More</a>
+          <p>We wish to formally inform you that the Fifth Graduation Ceremony of the ZCPIT will take place on 𝟏𝟓𝐭𝐡 𝐍𝐨𝐯𝐞𝐦𝐛𝐞𝐫,𝟐𝟎𝟐𝟒 at 𝐌𝐮𝐥𝐮𝐧𝐠𝐮𝐬𝐡𝐢 𝐈𝐧𝐭𝐞𝐫𝐧𝐚𝐭𝐢𝐨𝐧𝐚𝐥 𝐂𝐨𝐧𝐟𝐞𝐫𝐞𝐧𝐜𝐞 𝐂𝐞𝐧𝐭𝐫𝐞 starting 𝟎𝟖:𝟎𝟎 𝐇𝐨𝐮𝐫𝐬.</p>
+          <a href="https://www.facebook.com/share/1B2GanYJNg/" class="read-more">Read More</a>
         </div>
       </div>
     </div>
